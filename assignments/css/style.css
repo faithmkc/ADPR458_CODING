@@ -1,0 +1,30 @@
+body {
+    
+    font-family: sans-serif;
+  }
+  .tupperware {
+    width: 960px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    border-bottom: 1px solid dodgerblue;
+    background-color:aliceblue;
+    color: white;
+    padding: 2rem;
+}
+  h1 {
+    font-size: 2 rem;
+  }
+  h2 {
+    font-size: 1.5 rem;
+  }
+  h3{
+    font-size: 1.25 rem;
+  }
+  img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 6px solid dodgerblue;
+  }
