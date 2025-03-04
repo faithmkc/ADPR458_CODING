@@ -1,11 +1,14 @@
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
-    margin: 0px 10%;
+    margin: 0;
     font-family: sans-serif;
     background-image: url("../images/bg.png");
   }
-  .container{
-    background-color: white;
-  }
+  
   .tupperware {
     width: 960px;
     margin: 0 auto;
@@ -26,9 +29,66 @@ body {
   h3{
     font-size: 1.25 rem;
   }
-  img {
+  .circle{
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 999px;
     border: 6px solid dodgerblue;
+  } */
+
+  a:link, a:visited{
+    color: #9abcf8;
+    text-decoration: none;
+
   }
+  a:hover{
+    color: #4d75ba;
+    text-decoration: underline;
+
+  }
+  /* img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 6px solid dodgerblue;
+  } */
+  /********** LAYOUT*********/
+  .container{
+    background-color: white;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(12, 1fr);
+    margin:0 auto;
+    width: min(95%, 75rem);
+  }
+  .container>*{
+    grid-column: span 12;
+  }
+
+  /*** destop layout***/
+  @media screen and (min-width: 40rem){
+    .col-span-8{
+      grid-column: span 8;
+    }
+    .col-span-4{
+      grid-column: span 4;
+    }
+  }
+
+
+  /*****components*****/
+.button:link, button:visited {
+  color:white;
+  background-color: dodgerblue;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 1.75rem;
+  border-radius: 2rem;
+  box-shadow: 0 .125rem .5rem rgba(0,0,0, .15);
+  display: inline-block;
+  margin: 0 .25 rem .25 rem 0;
+  transition: background-color 0.5s ease;
+}
+.button:hover {
+  background-color: blue;
+}
