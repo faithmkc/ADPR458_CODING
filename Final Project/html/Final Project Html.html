@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Border Page with Task Bar</title>
+    <link rel="stylesheet" href="/Final Project/css/css final project.css">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            height: 100%;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            position: relative; /* Allows absolute positioning of the circles */
+        }
+        .top-border, .bottom-border {
+            background-color: #d3d3d3; /* Pale hospital grey */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #d3d3d3;
+            padding: 10px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            padding: 8px 12px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            flex: 1;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="top-border">
+        <nav>
+            <a href="#">NUTRITION</a>
+            <a href="#">APPOINTMENTS</a>
+            <a href="#">SERVICES</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">X-RAYS</a>
+            <a href="#">CAREERS</a>
+        </nav>
+    </div>
+    <button class="top-right-button">BOOK YOUR APPOINTMENT</button>
+
+
+    <div class="content"></div>
+
+    <!-- Circle container -->
+    <div class="image-circle-logo">
+        <img src="/Final Project/images/completehealthchiropracticlogo.jpg" alt="Profile" class="circular-image-logo">
+    </div>
+    <div class="image-circle-headshot">
+        <img src="/Final Project/images/completehealthchiropracticlogo.jpg" alt="Headshot" class="circular-image-headshot">
+    </div>
+    <div class="text-content-right">
+        <p>Welcome to Complete Health Chiropractic — Your Health, Our Priority.</p>
+    </div>
+    <div class="text-content-small">
+        <p>Here is your new beginning to health and here is the next step to being healthy. We are here looking for people who want a sustainable natural way to health that could become generational and is not putting poison into your body.</p>
+    </div>
+    <div class="blue-box">
+        <p>This is an important message or call-to-action section!</p>
+    </div>
+    
+
+    <div class="bottom-border">
+        <p> PHONE - 402-488-0288 EMAIL - COMPLETEHEALTH@CHC.COM</p>
+    </div>
+   
+    
+</body>
+</html>
+

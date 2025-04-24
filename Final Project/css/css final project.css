@@ -1,0 +1,82 @@
+.image-circle-logo {
+  position: relative;
+  top: 100px; /* Distance from top border */
+  left: 150px; /* Distance from left side */
+}
+
+
+.circular-image-logo {
+  width: 350px;             /* Bigger size */
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid grey;   /* Thicker grey border */
+}
+.image-circle-headshot{
+  position:absolute;
+  top: 350px;
+  left: 400px;
+}
+.circular-image-headshot {
+  width: 150px;             /* Bigger size */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 10px solid green; 
+}
+.top-right-button {
+  position: absolute;
+  top: 90px;               /* Just below the top bar */
+  right: 30px;             /* Align to the right */
+  background-color: #28a745; /* Bootstrap-style green */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-right-button:hover {
+  background-color: #218838;
+}
+.text-content-right {
+  position: absolute;
+  top: 200px; /* Below the button */
+  left: 550px; /* Right of the images */
+  right: 30px; /* Keep it within the screen */
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  line-height: 1.5;
+}
+.text-content-small {
+  position: absolute;
+  top: 300px; /* Below the button */
+  left: 775px; /* Right of the images */
+  right: 30px; /* Keep it within the screen */
+  max-width: 500px;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  line-height: 1.5;
+}
+.blue-box {
+  background-color: #007bff; /* Strong blue */
+  color: white;
+  padding: 200px 200px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 200px 60px 50px 60px;
+  border-radius: 20px; 
+  
+}
+
+
+
+
+
+
