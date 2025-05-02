@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Border Page with Task Bar</title>
+    <link rel="stylesheet" href="/final-project/css/css final project.css"> <!-- External CSS Link -->
+</head>
+<body>
+    <!-- Logo and Home Button -->
+    <a href="index.html" class="logo-button">
+        <img src="/final-project/images/completehealthchiropracticlogo.jpg" alt="Logo" class="logo-img">
+    </a>
+
+    <!-- Navigation Bar -->
+    <div class="top-border">
+        <nav>
+            <a href="#">NUTRITION</a>
+            <a href="#">APPOINTMENTS</a>
+            <a href="#">SERVICES</a>
+            <a href="/final-project/aboutus.html">ABOUT US</a>
+            <a href="/final-project/x-ray.html">X-RAYS</a>
+            <a href="#">CAREERS</a>
+        </nav>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <!-- Appointment Form -->
+        <form class="appointment-form" id="appointment-form" onsubmit="showSuccessMessage(event)">
+            <h2>Book an Appointment</h2>
+
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Appointment</button>
+        </form>
+
+        <!-- Success Message (Initially Hidden) -->
+        <div class="success-message" id="success-message">
+            <h2>SUCCESS!</h2>
+            <p>Your appointment request has been submitted successfully. We will get back to you shortly.</p>
+            <a href="index.html">Return to Homepage</a>
+        </div>
+    </div>
+
+    <!-- Bottom Border with Contact Information -->
+    <div class="bottom-border">
+        <p>PHONE - 402-488-0288 EMAIL - COMPLETEHEALTH@CHC.COM</p>
+    </div>
+
+    <script>
+        // JavaScript function to show success message after form submission
+        function showSuccessMessage(event) {
+            // Prevent the form from submitting normally (page reload)
+            event.preventDefault();
+
+            // Hide the form
+            document.querySelector('.appointment-form').style.display = 'none';
+
+            // Show the success message
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+
+

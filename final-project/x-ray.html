@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>X-Ray Services - Complete Health Chiropractic</title>
+    <link rel="stylesheet" href="/final-project/css/css final project.css">
+    
+</head>
+<body>
+
+    <a href="index.html" class="logo-button">
+        <img src="/final-project/images/completehealthchiropracticlogo.jpg" alt="Logo" class="logo-img">
+    </a>
+
+    <div class="top-border">
+        <nav>
+            <a href="#">NUTRITION</a>
+            <a href="#">APPOINTMENTS</a>
+            <a href="#">SERVICES</a>
+            <a href="/final-project/aboutus.html">ABOUT US</a>
+            <a href="/final-project/x-ray.html">X-RAYS</a>
+            <a href="#">CAREERS</a>
+        </nav>
+    </div>
+
+    <div class="xray-container">
+        <h1 class="xray-header">In-House X-Ray Services</h1>
+
+        <!-- Clickable Image Slider -->
+        <div class="slider">
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <img class="slide-image" src="/final-project/images/xray1.jpg" alt="X-ray image 1">
+            <img class="slide-image" src="/final-project/images/xray2.jpg" alt="X-ray image 2">
+            <img class="slide-image" src="/final-project/images/xray3.jpg" alt="X-ray image 3">
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+        <div class="xray-info">
+            <p>
+                We provide in-house digital X-rays to quickly and accurately assess your spine and posture. Our equipment allows us to identify misalignments,
+                injuries, and other spinal health concerns—helping Dr. Jason and our team customize your treatment plan with confidence.
+            </p>
+        </div>
+
+        <h2 class="xray-header">Request an X-Ray Appointment</h2>
+
+        <form action="/submit-xray-form" method="POST">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" rows="4" placeholder="Reason for visit or additional notes"></textarea>
+            <button type="submit">Request Appointment</button>
+        </form>
+    </div>
+
+    <div class="bottom-border">
+        <p>PHONE - 402-488-0288 EMAIL - COMPLETEHEALTH@CHC.COM</p>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide-image');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
+
+        function changeSlide(direction) {
+            slideIndex += direction;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            if (slideIndex >= slides.length) slideIndex = 0;
+            showSlide(slideIndex);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlide(slideIndex);
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

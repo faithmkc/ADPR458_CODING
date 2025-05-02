@@ -4,45 +4,6 @@
     <meta charset="UTF-8">
     <title>Simple Border Page with Task Bar</title>
     <link rel="stylesheet" href="/final-project/css/css final project.css">
-    <style>
-        html, body {
-            overflow-x: hidden;
-            height: 100%;
-            margin: 0;
-            font-family: sans-serif;
-        }
-        body {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        .top-border, .bottom-border {
-            background-color: #d3d3d3; 
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: #d3d3d3;
-            padding: 10px 0;
-        }
-        nav a {
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            padding: 8px 12px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .content {
-            flex: 1;
-        }
-
-       
-    </style>
 </head>
 <body>
     <div class="top-border">
@@ -50,12 +11,15 @@
             <a href="#">NUTRITION</a>
             <a href="#">APPOINTMENTS</a>
             <a href="#">SERVICES</a>
-            <a href="#">ABOUT US</a>
-            <a href="#">X-RAYS</a>
+            <a href="/final-project/aboutus.html">ABOUT US</a>
+            <a href="/final-project/x-ray.html">X-RAYS</a>
             <a href="#">CAREERS</a>
         </nav>
     </div>
-    <button class="top-right-button">BOOK YOUR APPOINTMENT</button>
+    <button class="top-right-button" onclick="window.location.href='appointment.html'">
+        BOOK YOUR APPOINTMENT
+      </button>
+      
 
 
     <div class="content"></div>

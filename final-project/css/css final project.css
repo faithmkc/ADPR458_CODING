@@ -1,82 +1,366 @@
-.image-circle-logo {
-  position: relative;
-  top: 100px; /* Distance from top border */
-  left: 150px; /* Distance from left side */
+/* ========= GLOBAL RESET & BASE ========= */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-.circular-image-logo {
-  width: 350px;             /* Bigger size */
-  height: 350px;
+/* ========= NAVIGATION ========= */
+.top-border, .bottom-border {
+  background-color: #d3d3d3;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d3d3d3;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  color: dodgerblue;
+}
+
+/* ========= LOGO BUTTON ========= */
+.logo-button {
+  position: fixed;
+  top: 50px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.logo-button:hover {
+  background-color: #27ae60;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 10px solid grey;   /* Thicker grey border */
 }
-.image-circle-headshot{
-  position:absolute;
+
+/* ========= IMAGE STYLES ========= */
+.circular-image-logo,
+.circular-image-headshot,
+.team-image,
+.doctor-image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.circular-image-logo {
+  width: 350px;
+  height: 350px;
+  border: 10px solid grey;
+}
+
+.circular-image-headshot {
+  width: 150px;
+  height: 150px;
+  border: 10px solid green;
+}
+
+.image-circle-logo {
+  position: relative;
+  top: 100px;
+  left: 150px;
+}
+
+.image-circle-headshot {
+  position: absolute;
   top: 350px;
   left: 400px;
 }
-.circular-image-headshot {
-  width: 150px;             /* Bigger size */
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 10px solid green; 
+
+/* ========= TEXT CONTENT ========= */
+.text-content-right,
+.text-content-small {
+  position: absolute;
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
 }
+
+.text-content-right {
+  top: 200px;
+  left: 550px;
+  right: 30px;
+  font-size: 24px;
+}
+
+.text-content-small {
+  top: 300px;
+  left: 775px;
+  right: 30px;
+  max-width: 500px;
+  font-size: 12px;
+}
+
+/* ========= BUTTONS ========= */
+.top-right-button,
+.submit-btn,
+form button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+}
+
 .top-right-button {
   position: absolute;
-  top: 90px;               /* Just below the top bar */
-  right: 30px;             /* Align to the right */
-  background-color: #28a745; /* Bootstrap-style green */
-  color: white;
+  top: 90px;
+  right: 30px;
+  background-color: #28a745;
   padding: 12px 24px;
-  border: none;
+  font-size: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .top-right-button:hover {
   background-color: #218838;
+  transform: translateY(-4px);
 }
-.text-content-right {
-  position: absolute;
-  top: 200px; /* Below the button */
-  left: 550px; /* Right of the images */
-  right: 30px; /* Keep it within the screen */
-  text-align: center;
-  font-size: 24px;
-  color: #333;
-  line-height: 1.5;
+
+.top-right-button:active {
+  background-color: #1e7e34;
+  transform: translateY(2px);
 }
-.text-content-small {
-  position: absolute;
-  top: 300px; /* Below the button */
-  left: 775px; /* Right of the images */
-  right: 30px; /* Keep it within the screen */
+
+.submit-btn,
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: dodgerblue;
+  font-size: 16px;
+}
+
+.submit-btn:hover,
+form button:hover {
+  background-color: #2ecc71;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active,
+form button:active {
+  background-color: #1E90FF;
+  transform: translateY(2px);
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(30, 144, 255, 0.5);
+}
+
+/* ========= FORM & INPUTS ========= */
+form {
   max-width: 500px;
-  text-align: center;
-  font-size: 12px;
-  color: #333;
-  line-height: 1.5;
+  margin: 0 auto;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.blue-box {
-  background-color: #007bff; /* Strong blue */
+
+form input,
+form textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ========= SUCCESS MESSAGE ========= */
+.success-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #4CAF50;
   color: white;
-  padding: 200px 200px;
+  border-radius: 5px;
+  display: none;
+}
+
+.success-message a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.success-message a:hover {
+  text-decoration: underline;
+}
+
+/* ========= TEAM SECTION ========= */
+.team-section {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.team-member {
+  flex: 1 1 250px;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #2E8B57;
+  margin-bottom: 15px;
+}
+
+/* ========= XRAY SECTION ========= */
+.xray-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.xray-header {
+  text-align: center;
+  color: #2E8B57;
+  margin-bottom: 30px;
+}
+
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-image {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(46, 139, 87, 0.8);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background-color: #256a45;
+}
+
+.xray-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ========= ABOUT PAGE ========= */
+.about-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.about-header {
+  text-align: center;
+  font-size: 2em;
+  color: #2E8B57;
+  margin-bottom: 20px;
+}
+
+.office-description {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.doctor-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.doctor-image {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #2E8B57;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .doctor-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ========= CONTENT AREA ========= */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ========= BLUE BOX SECTION ========= */
+.blue-box {
+  background-color: #007bff;
+  color: white;
+  padding: 100px;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
   margin: 200px 60px 50px 60px;
-  border-radius: 20px; 
-  
+  border-radius: 20px;
 }
-
-
-
-
-
-
