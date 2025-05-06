@@ -4,37 +4,40 @@
     <meta charset="UTF-8">
     <title>X-Ray Services - Complete Health Chiropractic</title>
     <link rel="stylesheet" href="/final-project/css/css final project.css">
-    
 </head>
 <body>
 
+    <!-- Logo -->
     <a href="index.html" class="logo-button">
         <img src="/final-project/images/completehealthchiropracticlogo.jpg" alt="Logo" class="logo-img">
     </a>
 
+    <!-- Navigation Bar -->
     <div class="top-border">
         <nav>
-            <a href="#">NUTRITION</a>
-            <a href="#">APPOINTMENTS</a>
-            <a href="#">SERVICES</a>
+            <a href="https://md.standardprocess.com/products" target="_blank">NUTRITION</a>
+            <a href="/final-project/appointment.html">APPOINTMENTS</a>
+            <a href="/final-project/services.html">SERVICES</a>
             <a href="/final-project/aboutus.html">ABOUT US</a>
             <a href="/final-project/x-ray.html">X-RAYS</a>
-            <a href="#">CAREERS</a>
+            <a href="/final-project/careers.html">CAREERS</a>
         </nav>
     </div>
 
+    <!-- X-Ray Services Section -->
     <div class="xray-container">
         <h1 class="xray-header">In-House X-Ray Services</h1>
 
         <!-- Clickable Image Slider -->
         <div class="slider">
             <button class="prev" onclick="changeSlide(-1)">❮</button>
-            <img class="slide-image" src="/final-project/images/xray1.jpg" alt="X-ray image 1">
-            <img class="slide-image" src="/final-project/images/xray2.jpg" alt="X-ray image 2">
-            <img class="slide-image" src="/final-project/images/xray3.jpg" alt="X-ray image 3">
+            <img class="slide-image" src="/final-project/images/hands.jpg" alt="X-ray image 1">
+            <img class="slide-image" src="/final-project/images/skull.jpg" alt="X-ray image 2">
+            <img class="slide-image" src="/final-project/images/chest.jpg" alt="X-ray image 3">
             <button class="next" onclick="changeSlide(1)">❯</button>
         </div>
 
+        <!-- X-Ray Information Section -->
         <div class="xray-info">
             <p>
                 We provide in-house digital X-rays to quickly and accurately assess your spine and posture. Our equipment allows us to identify misalignments,
@@ -44,6 +47,7 @@
 
         <h2 class="xray-header">Request an X-Ray Appointment</h2>
 
+        <!-- Appointment Form -->
         <form action="/submit-xray-form" method="POST">
             <input type="text" name="fullName" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
@@ -53,10 +57,25 @@
         </form>
     </div>
 
+    <!-- Social Media Buttons -->
+    <div class="social-buttons">
+        <a href="https://www.youtube.com" target="_blank" class="social-btn youtube-btn" title="YouTube">
+            <img src="/final-project/images/youtube.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.blog.com" target="_blank" class="social-btn blog-btn" title="Blog">
+            <img src="/final-project/images/blog.png" alt="Blog" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-btn instagram-btn" title="Instagram">
+            <img src="/final-project/images/instagram.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+
+    <!-- Footer -->
     <div class="bottom-border">
         <p>PHONE - 402-488-0288 EMAIL - COMPLETEHEALTH@CHC.COM</p>
     </div>
 
+    <!-- Image Slider Script -->
     <script>
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide-image');
@@ -81,6 +100,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Simple Border Page with Task Bar</title>
-    <link rel="stylesheet" href="/final-project/css/css final project.css"> <!-- External CSS Link -->
+    <link rel="stylesheet" href="/final-project/css/css final project.css">
 </head>
 <body>
-    <!-- Logo and Home Button -->
     <a href="index.html" class="logo-button">
         <img src="/final-project/images/completehealthchiropracticlogo.jpg" alt="Logo" class="logo-img">
     </a>
 
-    <!-- Navigation Bar -->
     <div class="top-border">
         <nav>
-            <a href="#">NUTRITION</a>
-            <a href="#">APPOINTMENTS</a>
-            <a href="#">SERVICES</a>
+            <a href="https://md.standardprocess.com/products?gad_source=1&gad_campaignid=20822240093&gbraid=0AAAAAqkCapnzeXHd8Fndt274-J1ijMiPK&gclid=Cj0KCQjw5ubABhDIARIsAHMighadi1KM8afUwgGRue64UbcFv0TBj8Iouth_m9GboDAAVule78c07jEaAtvrEALw_wcB" target="_blank">NUTRITION</a>
+            <a href="/final-project/appointment.html">APPOINTMENTS</a>
+            <a href="/final-project/services.html">SERVICES</a>
             <a href="/final-project/aboutus.html">ABOUT US</a>
             <a href="/final-project/x-ray.html">X-RAYS</a>
-            <a href="#">CAREERS</a>
+            <a href="/final-project/careers.html">CAREERS</a>
         </nav>
     </div>
 
-    <!-- Content Section -->
     <div class="content">
-        <!-- Appointment Form -->
         <form class="appointment-form" id="appointment-form" onsubmit="showSuccessMessage(event)">
             <h2>Book an Appointment</h2>
 
@@ -52,7 +48,6 @@
             <button type="submit" class="submit-btn">Submit Appointment</button>
         </form>
 
-        <!-- Success Message (Initially Hidden) -->
         <div class="success-message" id="success-message">
             <h2>SUCCESS!</h2>
             <p>Your appointment request has been submitted successfully. We will get back to you shortly.</p>
@@ -60,27 +55,29 @@
         </div>
     </div>
 
-    <!-- Bottom Border with Contact Information -->
+    <div class="social-buttons">
+        <a href="https://www.youtube.com" target="_blank" class="social-btn youtube-btn" title="YouTube">
+            <img src="/final-project/images/youtube.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.blog.com" target="_blank" class="social-btn blog-btn" title="Blog">
+            <img src="/final-project/images/blog.png" alt="Blog" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="social-btn instagram-btn" title="Instagram">
+            <img src="/final-project/images/instagram.png" alt="Instagram" class="social-icon">
+        </a>
+    </div>
+
     <div class="bottom-border">
         <p>PHONE - 402-488-0288 EMAIL - COMPLETEHEALTH@CHC.COM</p>
     </div>
 
     <script>
-        // JavaScript function to show success message after form submission
         function showSuccessMessage(event) {
-            // Prevent the form from submitting normally (page reload)
             event.preventDefault();
-
-            // Hide the form
             document.querySelector('.appointment-form').style.display = 'none';
-
-            // Show the success message
             document.getElementById('success-message').style.display = 'block';
         }
     </script>
 </body>
 </html>
-
-
-
 
